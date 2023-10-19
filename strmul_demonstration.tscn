@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvvubed7ekdms"]
+
+[ext_resource type="Script" path="res://StrmulBaseString.gd" id="1_x416j"]
+[ext_resource type="Script" path="res://IntegerField.gd" id="2_ql7ng"]
+[ext_resource type="Script" path="res://StrmulResult.gd" id="3_eqgua"]
+
+[node name="strmul_demonstration" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 400.0
+offset_bottom = 201.0
+color = Color(0, 0, 0.501961, 1)
+
+[node name="BaseString" type="TextEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 23.0
+offset_right = 262.0
+offset_bottom = 74.0
+script = ExtResource("1_x416j")
+
+[node name="Multiplier" type="TextEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 22.0
+offset_right = 380.0
+offset_bottom = 73.0
+script = ExtResource("2_ql7ng")
+
+[node name="Result" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 101.0
+offset_right = 376.0
+offset_bottom = 177.0
+script = ExtResource("3_eqgua")
+
+[connection signal="change" from="ColorRect/BaseString" to="ColorRect/Result" method="onChange"]
+[connection signal="text_changed" from="ColorRect/BaseString" to="ColorRect/BaseString" method="onTextChange"]
+[connection signal="change" from="ColorRect/Multiplier" to="ColorRect/Result" method="onChange"]
+[connection signal="text_changed" from="ColorRect/Multiplier" to="ColorRect/Multiplier" method="onTextChange"]

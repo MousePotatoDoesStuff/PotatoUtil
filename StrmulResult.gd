@@ -1,0 +1,20 @@
+extends RichTextLabel
+
+@onready var base=$"../BaseString"
+@onready var multiplier=$"../Multiplier"
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func onChange():
+	var s=base.text 
+	var m=multiplier.text 
+	if m=="" or m=="-":
+		m="0"
+	m=int(m)
+	self.text=potatoutil.string.strmul(s,m)
