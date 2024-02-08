@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chrxsjeoo61gt"]
+[gd_scene load_steps=5 format=3 uid="uid://chrxsjeoo61gt"]
 
 [ext_resource type="Script" path="res://scripts/potatoutil/MultipleSceneManager.gd" id="1_5q3ka"]
 [ext_resource type="Script" path="res://scripts/potatoutil/ManagedScene.gd" id="2_0ybdl"]
-[ext_resource type="PackedScene" uid="uid://cvvubed7ekdms" path="res://strmul_demonstration.tscn" id="3_0aoih"]
+[ext_resource type="PackedScene" uid="uid://cvvubed7ekdms" path="res://scenes/strmul_demonstration.tscn" id="3_0aoih"]
+[ext_resource type="PackedScene" uid="uid://b3sh5wliqsfeu" path="res://scenes/demo_scene.tscn" id="4_ub73l"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -38,3 +39,5 @@ offset_top = 21.0
 offset_right = 442.0
 offset_bottom = 143.0
 color = Color(0, 0, 0.501961, 1)
+
+[node name="DemoScene" parent="MultipleSceneManager" instance=ExtResource("4_ub73l")]
