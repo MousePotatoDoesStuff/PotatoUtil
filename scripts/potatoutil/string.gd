@@ -8,4 +8,3 @@ static func strmul(element,count):
 	for i in range(count):
 		X+=element
 	return X
-
