@@ -1,0 +1,3 @@
+This is a project supporting an utility library for Godot containing some stuff like string multiplication I would have liked to have available from the get go but had to implement myself instead.
+
+GitHub link: https://github.com/MousePotatoDoesStuff/PotatoUtil
